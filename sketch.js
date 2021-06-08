@@ -79,7 +79,7 @@ function draw() {
 
   if(particle!=null){
     particle.display();
-    if(particle.body.position.y>500){
+    if(particle.body.position.y>700){
       if(particle.body.position.x<300){
         score = score+500;
         particle=null;
@@ -87,14 +87,14 @@ function draw() {
           gameState = "end";
         }
       }
-     else if(particle.body.position.x<600 && particle.body.position.x>301){
+      else if(particle.body.position.x<600 && particle.body.position.x>301){
         score = score+100;
         particle = null;
         if(count>=5){
           gameState = "end";
         }
       }
-     else if(particle.body.position.x<900 && particle.body.position.x>601){
+      else if(particle.body.position.x<900 && particle.body.position.x>601){
         score = score+200;
         particle = null;
         if(count>=5){
@@ -109,20 +109,15 @@ function draw() {
      plinkos[i].display();
      
    }
-  /* if(frameCount%60===0){
-     particles.push(new Particle(mouseX, 10,10));
-     score++;
-   }
- 
-  for (var j = 0; j < particles.length; j++) {
-   
-     particles[j].display();
-   }*/
+  
    for (var k = 0; k < divisions.length; k++) {
      
      divisions[k].display();
    }
 
+   if(gameState==="end"){
+     text("GAME OVER")
+   }
 ground.display();
    
 }
