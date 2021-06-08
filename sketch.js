@@ -87,14 +87,14 @@ function draw() {
           gameState = "end";
         }
       }
-      if(particle.body.position.x<600 && particle.body.position.x>301){
+     else if(particle.body.position.x<600 && particle.body.position.x>301){
         score = score+100;
         particle = null;
         if(count>=5){
           gameState = "end";
         }
       }
-      if(particle.body.position.x<900 && particle.body.position.x>601){
+     else if(particle.body.position.x<900 && particle.body.position.x>601){
         score = score+200;
         particle = null;
         if(count>=5){
